@@ -1,0 +1,18 @@
+{% extends 'appcoder/base.html' %}
+
+{% load static %}
+
+{% block titulo %} Formulario - Agregar Entrega {% endblock titulo  %}
+
+{% block main %}
+
+    <form action="/entregableFormulario/"  method="POST">
+        {% csrf_token %}
+        <p> Nombre: <input type = "text" name="nombre">
+        <p> Fecha: <input type = "date" name="fecha">
+        <p> Entregado: <input type = "checkbox" name="entrega">
+        <input type = "submit" value="Enviar">
+    </form>   
+
+{% endblock main %}
+

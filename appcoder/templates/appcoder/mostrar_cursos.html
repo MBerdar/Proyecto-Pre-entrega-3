@@ -1,0 +1,14 @@
+{% extends 'appcoder/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+{% for curso in cursos %}
+    <li>Curso: {{ curso.nombre }} | Comision: {{ curso.comision }}</li>
+{% endfor %}
+
+
+{% endblock main %}

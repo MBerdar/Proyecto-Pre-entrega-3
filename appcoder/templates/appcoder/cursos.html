@@ -1,0 +1,17 @@
+{% extends 'appcoder/base.html' %}
+
+{% block titulo %}Coderhouse | Cursos {% endblock%}
+
+{% block main %}
+
+{% include 'appcoder/publicidad.html' %}
+
+<h1>Aca se enlistan mis cursos</h1>
+
+{% for curso in cursos %}
+
+{{curso.nombre}}  - {{curso.comision}}
+
+{% endfor %}
+
+{% endblock %}
